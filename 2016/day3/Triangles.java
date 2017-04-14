@@ -27,19 +27,13 @@ public class Triangles {
 		Scanner s1 = new Scanner(line1);
 		Scanner s2 = new Scanner(line2);
 		Scanner s3 = new Scanner(line3);
-		int t1s1 = s1.nextInt();
-		int t1s2 = s2.nextInt();
-		int t1s3 = s3.nextInt();
-		int t2s1 = s1.nextInt();
-		int t2s2 = s2.nextInt();
-		int t2s3 = s3.nextInt();
-		int t3s1 = s1.nextInt();
-		int t3s2 = s2.nextInt();
-		int t3s3 = s3.nextInt();
 		int num = 0;
-		num += addSides(t1s1, t1s2, t1s3);
-		num += addSides(t2s1, t2s2, t2s3);
-		num += addSides(t3s1, t3s2, t3s3);
+		for(int i = 0; i < 3; i++) {
+			int ts1 = s1.nextInt();
+			int ts2 = s2.nextInt();
+			int ts3 = s3.nextInt();
+			num += addSides(ts1, ts2, ts3);
+		}
 
 		return num;
 	}
